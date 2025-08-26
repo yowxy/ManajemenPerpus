@@ -50,10 +50,10 @@
 
 
 <script>
-  window.addEventListener('login-error', () => {
+  window.addEventListener('login-success', () => {
         Swal.fire({
-            icon: 'error',
-            title: 'Gagal Login!',
+            icon: 'success',
+            title: 'success',
             text: 'Username atau Password yang Anda masukkan salah.',
             timer: 3000,
             showConfirmButton: false

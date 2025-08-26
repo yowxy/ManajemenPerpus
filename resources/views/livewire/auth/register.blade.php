@@ -14,12 +14,27 @@
 
     <form wire:submit="login">
       <div class="mb-4">
-        <label class="block text-sm font-medium text-gray-700 mb-1">Username</label>
-        <input wire:model="username" type="text" placeholder="Username"
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+        <input wire:model="nama" type="text" placeholder="isi nama "
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 mb-1">email</label>
+        <input wire:model="email" type="email" placeholder="isi email ini"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nomor Telepon</label>
+        <input wire:model="email" type="text" placeholder="isi nomor telepon"
           class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
       </div>
       <div class="mb-6">
         <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+        <input wire:model="password" type="password" placeholder="••••••••"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+      </div>
+      <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
         <input wire:model="password" type="password" placeholder="••••••••"
           class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
       </div>
@@ -42,7 +57,7 @@
 
     <p class="text-center text-sm text-gray-500 mt-6">
       Belum punya akun?
-      <a wire:navigate href="/register" class="text-blue-600 hover:underline font-medium">Register</a>
+      <a wire:navigate href="/l ogin" class="text-blue-600 hover:underline font-medium">Login</a>
     </p>
   </div>
 
