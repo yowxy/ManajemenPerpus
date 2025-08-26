@@ -34,9 +34,5 @@ class Login extends Component
             session()->regenerate();
             return redirect()->route('dashboard');
         }
-        $this->dispatch('login-success');
-        
-
-
     }
 }
