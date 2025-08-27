@@ -18,8 +18,8 @@
           <a href="#" class="text-gray-700 hover:text-blue-600">{{ Auth::user()->nama }}</a>
         @endauth
         @guest
-          <a href="#" class="text-gray-700 hover:text-blue-600">Login</a>
-          <a href="#" class="text-gray-700 hover:text-blue-600">Register</a>
+          <a href="/login" class="text-gray-700 hover:text-blue-600">Login</a>
+          <a href="/Register" class="text-gray-700 hover:text-blue-600">Register</a>
         @endguest
       </div>
 
