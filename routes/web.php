@@ -12,7 +12,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/',Dashboard::class)->name('dashboard.index');
+Route::get('/',Dashboard::class)->name('dashboard.index');
 Route::get('/login',Login::class)->name('login');
 Route::get('/register',Register::class)->name('register');
 Route::get('/dashboard', Dashboard::class)->name('dashboard');

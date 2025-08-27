@@ -38,12 +38,12 @@ class Register extends Component
     public function  register ()
     {
         $this->validate();
-
             $user = anggota::create([
             'nama' => $this->nama,
             'email' => $this->email,
             'nomor_telepon' => $this->nomor_telepon,
             'password' => Hash::make($this->password),
+            'role' => 'user',
             'tanggal_bergabung' => $this->tanggal_bergabung,
         ]);
 

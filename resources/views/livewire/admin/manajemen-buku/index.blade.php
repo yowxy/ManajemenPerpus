@@ -9,12 +9,7 @@
             <p class="text-gray-600 mb-6">Selamat datang {{ Auth::user()->nama }}, ini adalah tampilan manajemen buku.</p>
 
             <!-- Tombol tambah buku -->
-            <div class="mb-7">
-                <a href=""
-                   class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                    + Tambah Buku
-                </a>
-            </div>
+          <livewire:admin.manajemen-buku.create />
 
             <!-- Tabel daftar buku -->
             <div class="overflow-x-auto bg-white shadow-md rounded-lg">
