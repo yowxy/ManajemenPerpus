@@ -6,11 +6,13 @@ use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request; // ini yang benar, bukan facade
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/',Dashboard::class)->name('dashboard.index');
 Route::get('/login',Login::class)->name('login');
 Route::get('/register',Register::class)->name('register');
 Route::get('/dashboard', Dashboard::class)->name('dashboard');

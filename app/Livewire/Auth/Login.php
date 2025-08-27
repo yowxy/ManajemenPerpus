@@ -5,6 +5,7 @@ namespace App\Livewire\Auth;
 use App\Models\anggota;
 use Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash as FacadesHash;
 use Livewire\Component;
 
 class Login extends Component
@@ -29,7 +30,7 @@ class Login extends Component
 
         $anggota = anggota::where('email', $this->email)->first();
 
-        if($anggota && Hash::check($this->password, $anggota->password)){
+        if($anggota && FacadesHash::check($this->password, $anggota->password)){
             Auth::login($anggota);
             session()->regenerate();
             return redirect()->route('dashboard');

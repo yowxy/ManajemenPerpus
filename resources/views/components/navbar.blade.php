@@ -19,7 +19,7 @@
         @endauth
         @guest
           <a href="/login" class="text-gray-700 hover:text-blue-600">Login</a>
-          <a href="/Register" class="text-gray-700 hover:text-blue-600">Register</a>
+          <a href="/register" class="text-gray-700 hover:text-blue-600">Register</a>
         @endguest
       </div>
 
