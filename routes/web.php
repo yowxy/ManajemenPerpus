@@ -2,6 +2,7 @@
 
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\ManajemenBuku\Index;
+use App\Livewire\Admin\ManajemenBuku\KategoriBuku;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,7 @@ Route::get('/login',Login::class)->name('login');
 Route::get('/register',Register::class)->name('register');
 Route::get('/dashboard', Dashboard::class)->name('dashboard');
 Route::get('/buku-index', Index::class)->name('buku.index');
+Route::get('/kategori-buku',KategoriBuku::class)->name('kategori-buku.index');
 #logout
 Route::post('/logout', function (Request $request) {
     Auth::logout();

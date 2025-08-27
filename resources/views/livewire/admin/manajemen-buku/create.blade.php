@@ -8,7 +8,7 @@
                 <button @click="isFormVisible = !isFormVisible" type="button"
                     class="inline-flex items-center px-4 py-2 text-sm font-medium border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors m-6"
                     :class="{ 'text-white bg-blue-600 hover:bg-blue-700 border-transparent focus:ring-blue-500': !
-                isFormVisible, 'text-gray-700 bg-white hover:bg-gray-50 border-gray-300 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600': isFormVisible }">
+                isFormVisible, 'text-gray-700  hover:bg-blue-700   bg-blue-600 dark:text-gray-200 dark:border-gray-600 ': isFormVisible }">
                     <span x-show="!isFormVisible" class="inline-flex items-center">
                         <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -38,7 +38,7 @@
 
                     <form wire:submit="store" class="space-y-5">
 
-                        <label for="name"
+                        <label for="nama_buku"
                             class="block mb-2 text-sm font-medium text-blue-500  md:mt-4">Nama Buku</label>
                         <div class="flex">
                             <span
@@ -48,17 +48,17 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="text" wire:model="nama_buku"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="please fill this input">
-                            @error('kode_js')
+                            @error('nama_buku')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
 
 
-                        <label for="name"
+                        <label for="judul"
                             class="block mb-2 text-sm font-medium text-blue-500  md:mt-4">Judul Buku</label>
                         <div class="flex">
                             <span
@@ -68,16 +68,16 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="text" wire:model="judul"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="please fill this input">
-                            @error('kode_js')
+                            @error('judul')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
 
-                        <label for="name"
+                        <label for="penulis"
                             class="block mb-2 text-sm font-medium text-blue-500  md:mt-4">Penulis</label>
                         <div class="flex">
                             <span
@@ -87,16 +87,16 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="text" wire:model="penulis"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="please fill this input">
-                            @error('kode_js')
+                            @error('penulis')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
 
-                        <label for="name"
+                        <label for="penerbit"
                             class="block mb-2 text-sm font-medium text-blue-500  md:mt-4">Penerbit</label>
                         <div class="flex">
                             <span
@@ -106,16 +106,16 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="text" wire:model="penerbit"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="please fill this input">
-                            @error('kode_js')
+                            @error('penerbit')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
 
-                        <label for="name"
+                        <label for="tahun_terbit"
                             class="block mb-2 text-sm font-medium text-blue-500  md:mt-4">Tahun Terbit</label>
                         <div class="flex">
                             <span
@@ -125,16 +125,16 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="date" wire:model="tahun_terbit"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="please fill this input">
-                            @error('kode_js')
+                            @error('tahun_terbit')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
 
-                        <label for="name"
+                        <label for="Isbn"
                             class="block mb-2 text-sm font-medium text-blue-500  md:mt-4">ISBN</label>
                         <div class="flex">
                             <span
@@ -144,10 +144,10 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="text" wire:model="Isbn"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="please fill this input">
-                            @error('kode_js')
+                                placeholder="please fill this input" readonly>
+                            @error('Isbn')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
                         </div>
@@ -164,7 +164,7 @@
                                 </svg>
 
                             </span>
-                            <input type="text" wire:model="kode_js"
+                            <input type="number" wire:model="stock_buku"
                                 class="rounded-none rounded-e-lg border  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  bg-blue-600 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="please fill this input">
                             @error('kode_js')
@@ -193,23 +193,13 @@
 
 
 <script>
-    window.addEventListener('barang-created', () => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Berhasil!',
-            text: 'Barang berhasil ditambahkan',
-            timer: 2000,
-            showConfirmButton: false
+    window.addEventListener('barangMasuk-created', () => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                text: 'Barang berhasil ditambahkan',
+                timer: 2000,
+                showConfirmButton: false
+            });
         });
-    });
-
-    window.addEventListener('barang-updated', () => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Berhasil!',
-            text: 'Barang berhasil diperbarui',
-            timer: 2000,
-            showConfirmButton: false
-        });
-    });
 </script>
