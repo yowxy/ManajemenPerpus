@@ -95,9 +95,9 @@
     </div>
 </div>
 
-
+@push('scripts')
 <script>
-    window.addEventListener('barangMasuk-created', () => {
+    window.addEventListener('success', () => {
             Swal.fire({
                 icon: 'success',
                 title: 'Berhasil!',
@@ -107,3 +107,4 @@
             });
         });
 </script>
+@endpush

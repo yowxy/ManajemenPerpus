@@ -7,27 +7,23 @@
         <p class="text-gray-600 mb-6">Selamat datang {{ Auth::user()->nama }}, ini adalah tampilan Kategori Buku.</p>
 
         <livewire:admin.manajemen-buku.create-kategori/>
-        
+
         <div class="overflow-x-auto bg-white shadow-md rounded-lg">
                <table class="min-w-full border border-gray-200">
                    <thead class="bg-gray-100 text-gray-700">
                        <tr>
                            <th class="py-3 px-4 border">No</th>
                            <th class="py-3 px-4 border">Judul</th>
-                           <th class="py-3 px-4 border">Penulis</th>
-                           <th class="py-3 px-4 border">Penerbit</th>
-                           <th class="py-3 px-4 border">Tahun</th>
+                           <th class="py-3 px-4 border">Deskripsi</th>
                            <th class="py-3 px-4 border">Aksi</th>
                        </tr>
                    </thead>
                    <tbody>
-                       {{-- @forelse($bukus as $index => $buku) --}}
-                           <tr class="hover:bg-gray-50">
-                               <td class="py-2 px-4 border"></td>
-                               <td class="py-2 px-4 border"></td>
-                               <td class="py-2 px-4 border"></td>
-                               <td class="py-2 px-4 border"></td>
-                               <td class="py-2 px-4 border"></td>
+                       @forelse($kategoriBuku as $index => $kategoriBukuu)
+                           <tr class=" text-black">
+                               <td class="py-2 px-4 border">{{ $loop->iteration }}</td>
+                               <td class="py-2 px-4 border">{{ $kategoriBukuu->nama_kategori }}</td>
+                               <td class="py-2 px-4 border">{{ $kategoriBukuu->deskripsi }}</td>
                                <td class="py-2 px-4 border text-center">
                                    <a href=""
                                       class="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">
@@ -44,15 +40,19 @@
                                    </form>
                                </td>
                            </tr>
-                       {{-- @empty --}}
+                       @empty
                            <tr>
                                <td colspan="6" class="text-center py-4 text-gray-500">
                                    Belum ada data buku.
                                </td>
                            </tr>
-                       {{-- @endforelse --}}
-                   </tbody>
-               </table>
+                           @endforelse
+
+                        </tbody>
+                    </table>
+                    <div class="mt-6">
+                         {{ $kategoriBuku->links() }}
+                    </div>
            </div>
         @endauth
 

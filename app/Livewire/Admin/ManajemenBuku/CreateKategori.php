@@ -28,6 +28,7 @@ class CreateKategori extends Component
             'deskripsi' => $this->deskripsi,
         ]);
         $this->resetValidation();
-         session()->flash('success', 'Barang masuk berhasil ditambahkan');
+        $this->dispatch('success');
+        session()->flash('success', 'Barang masuk berhasil ditambahkan');
     }
 }
